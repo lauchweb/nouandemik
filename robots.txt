@@ -1,1 +1,4 @@
+User-agent: *
+Allow: /
 
+Sitemap: https://nou.andemik.com/sitemap.xml
