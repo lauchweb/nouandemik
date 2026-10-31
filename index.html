@@ -154,12 +154,7 @@
       min-height: 0;
 
       display: grid;
-
-      grid-template-rows:
-        minmax(48px, 1fr)
-        auto
-        auto
-        minmax(48px, 1fr);
+      grid-template-rows: 1fr auto 1fr;
 
       align-items: center;
     }
@@ -169,8 +164,8 @@
 
       justify-self: center;
 
-      width: min(65%, 560px);
-      max-height: 42svh;
+      width: min(58%, 500px);
+      max-height: 27svh;
 
       height: auto;
       object-fit: contain;
@@ -181,11 +176,11 @@
     .tagline {
       max-width: 420px;
 
-      margin: 24px auto 0;
+      margin: 32px auto 0;
 
       font-family: inherit;
       font-size: 14px;
-      line-height: 1.5;
+      line-height: 1.7;
       font-weight: 400;
       letter-spacing: 0.01em;
 
@@ -263,16 +258,20 @@
 
       .hero-image {
         justify-self: center;
-        width: 85%;
-        max-height: 38svh;
+
+        width: 78%;
+        max-height: 24svh;
+
         margin-inline: auto;
       }
 
       .tagline {
-        max-width: 340px;
-        margin-top: 20px;
+        max-width: 300px;
+
+        margin-top: 28px;
+
         font-size: 12px;
-        line-height: 1.5;
+        line-height: 1.7;
       }
 
       .footer {
