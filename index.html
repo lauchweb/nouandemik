@@ -4,10 +4,7 @@
 <head>
   <meta charset="utf-8">
 
-  <meta
-    name="viewport"
-    content="width=device-width, initial-scale=1"
-  >
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <title>NOU ANDEMIK — Native Flora</title>
 
@@ -16,90 +13,33 @@
     content="NOU ANDEMIK is dedicated to keeping our native flora rooted for generations to come."
   >
 
-  <meta
-    name="robots"
-    content="index, follow"
-  >
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#ffffff">
 
-  <meta
-    name="theme-color"
-    content="#ffffff"
-  >
-
-  <link
-    rel="canonical"
-    href="https://nou.andemik.com/"
-  >
-
-  <!-- Favicon -->
-  <link
-    rel="icon"
-    type="image/png"
-    href="/favicon.png"
-  >
-
-  <!-- Web Manifest -->
-  <link
-    rel="manifest"
-    href="/site.webmanifest"
-  >
+  <link rel="canonical" href="https://nou.andemik.com/">
+  <link rel="icon" type="image/png" href="/favicon.png">
+  <link rel="manifest" href="/site.webmanifest">
 
   <!-- Open Graph -->
-  <meta
-    property="og:type"
-    content="website"
-  >
-
-  <meta
-    property="og:title"
-    content="NOU ANDEMIK — Native Flora"
-  >
-
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="NOU ANDEMIK — Native Flora">
   <meta
     property="og:description"
     content="NOU ANDEMIK is dedicated to keeping our native flora rooted for generations to come."
   >
-
-  <meta
-    property="og:url"
-    content="https://nou.andemik.com/"
-  >
-
-  <meta
-    property="og:image"
-    content="https://nou.andemik.com/og.jpg"
-  >
-
-  <meta
-    property="og:image:alt"
-    content="NOU ANDEMIK"
-  >
-
-  <meta
-    property="og:site_name"
-    content="NOU ANDEMIK"
-  >
+  <meta property="og:url" content="https://nou.andemik.com/">
+  <meta property="og:image" content="https://nou.andemik.com/og.jpg">
+  <meta property="og:image:alt" content="NOU ANDEMIK">
+  <meta property="og:site_name" content="NOU ANDEMIK">
 
   <!-- Twitter / X -->
-  <meta
-    name="twitter:card"
-    content="summary_large_image"
-  >
-
-  <meta
-    name="twitter:title"
-    content="NOU ANDEMIK — Native Flora"
-  >
-
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="NOU ANDEMIK — Native Flora">
   <meta
     name="twitter:description"
     content="NOU ANDEMIK is dedicated to keeping our native flora rooted for generations to come."
   >
-
-  <meta
-    name="twitter:image"
-    content="https://nou.andemik.com/og.jpg"
-  >
+  <meta name="twitter:image" content="https://nou.andemik.com/og.jpg">
 
   <!-- Structured Data -->
   <script type="application/ld+json">
@@ -116,6 +56,7 @@
     :root {
       --background: #ffffff;
       --text: #171717;
+      --accent: #68745A;
 
       --page-margin: clamp(20px, 4vw, 64px);
     }
@@ -167,9 +108,7 @@
         calc(var(--page-margin) * 0.8);
     }
 
-    /* -------------------------
-       Header
-    ------------------------- */
+    /* Header */
 
     .header {
       display: flex;
@@ -179,16 +118,20 @@
 
     .wordmark,
     .menu-link {
-      color: var(--text);
-
       font-family: inherit;
       font-size: 14px;
       line-height: 1;
-
       font-weight: 400;
       letter-spacing: 0.08em;
-
       text-decoration: none;
+    }
+
+    .wordmark {
+      color: var(--accent);
+    }
+
+    .menu-link {
+      color: var(--text);
     }
 
     .header-right {
@@ -198,14 +141,13 @@
     }
 
     .wordmark:hover,
-    .menu-link:hover {
+    .menu-link:hover,
+    .footer a:hover {
       text-decoration: underline;
       text-underline-offset: 3px;
     }
 
-    /* -------------------------
-       Main
-    ------------------------- */
+    /* Main */
 
     main {
       min-height: 0;
@@ -241,16 +183,13 @@
       font-family: inherit;
       font-size: 14px;
       line-height: 1.5;
-
       font-weight: 400;
       letter-spacing: 0.01em;
 
       text-align: center;
     }
 
-    /* -------------------------
-       Footer
-    ------------------------- */
+    /* Footer */
 
     .footer {
       display: grid;
@@ -263,7 +202,6 @@
       font-family: inherit;
       font-size: 10px;
       line-height: 1.2;
-
       font-weight: 400;
       letter-spacing: 0.04em;
     }
@@ -285,18 +223,15 @@
       text-decoration: none;
     }
 
-    .footer a:hover {
-      text-decoration: underline;
-      text-underline-offset: 3px;
+    .footer .contact-link {
+      color: var(--accent);
     }
 
     .footer-dot {
       user-select: none;
     }
 
-    /* -------------------------
-       Focus
-    ------------------------- */
+    /* Focus */
 
     .wordmark:focus-visible,
     .menu-link:focus-visible,
@@ -305,9 +240,7 @@
       outline-offset: 4px;
     }
 
-    /* -------------------------
-       Mobile
-    ------------------------- */
+    /* Mobile */
 
     @media (max-width: 600px) {
 
@@ -332,7 +265,6 @@
       .tagline {
         max-width: 340px;
         margin-top: 20px;
-
         font-size: 12px;
         line-height: 1.5;
       }
@@ -413,18 +345,9 @@
           ABOUT
         </a>
 
-        <a
-          class="menu-link"
-          href="mailto:nursery@andemik.com"
-          aria-label="Contact NOU ANDEMIK by email"
-        >
-          CONTACT
-        </a>
-
       </nav>
 
     </header>
-
 
     <!-- Main -->
 
@@ -444,7 +367,6 @@
 
     </main>
 
-
     <!-- Footer -->
 
     <footer class="footer">
@@ -456,17 +378,21 @@
 
       <nav
         class="footer-right"
-        aria-label="Legal"
+        aria-label="Footer navigation"
       >
+
+        <a
+          class="contact-link"
+          href="mailto:nursery@andemik.com"
+        >
+          Contact
+        </a>
 
         <a href="/terms.html">
           Terms
         </a>
 
-        <span
-          class="footer-dot"
-          aria-hidden="true"
-        >
+        <span class="footer-dot" aria-hidden="true">
           ·
         </span>
 
