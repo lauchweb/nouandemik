@@ -114,6 +114,7 @@
       display: flex;
       align-items: flex-start;
       justify-content: space-between;
+      gap: 16px;
     }
 
     .wordmark,
@@ -129,16 +130,25 @@
     .wordmark {
       color: var(--text);
       font-weight: 700;
-    }
-
-    .menu-link {
-      color: var(--text);
+      white-space: nowrap;
     }
 
     .header-right {
       display: flex;
-      align-items: flex-start;
+      align-items: center;
       gap: 10px;
+    }
+
+    .menu-link {
+      color: var(--text);
+      white-space: nowrap;
+    }
+
+    .menu-dot {
+      color: var(--text);
+      font-size: 10px;
+      line-height: 1;
+      user-select: none;
     }
 
     .wordmark:hover,
@@ -265,6 +275,10 @@
         gap: 8px;
       }
 
+      .menu-dot {
+        font-size: 9px;
+      }
+
       .hero-image {
         width: 85%;
         max-height: 38svh;
@@ -295,10 +309,11 @@
 
       .menu-link {
         font-size: 11px;
+        letter-spacing: 0.05em;
       }
 
       .header-right {
-        gap: 7px;
+        gap: 6px;
       }
 
       .footer {
@@ -322,6 +337,11 @@
 
       .menu-link {
         font-size: 10px;
+        letter-spacing: 0.04em;
+      }
+
+      .header-right {
+        gap: 5px;
       }
 
       .footer {
@@ -353,11 +373,26 @@
         aria-label="Main navigation"
       >
 
-        <a
-          class="menu-link"
-          href="/about.html"
-        >
+        <a class="menu-link" href="/about.html">
           ABOUT
+        </a>
+
+        <span class="menu-dot" aria-hidden="true">·</span>
+
+        <a class="menu-link" href="/nursery.html">
+          NURSERY
+        </a>
+
+        <span class="menu-dot" aria-hidden="true">·</span>
+
+        <a class="menu-link" href="/field.html">
+          FIELD
+        </a>
+
+        <span class="menu-dot" aria-hidden="true">·</span>
+
+        <a class="menu-link" href="/works.html">
+          WORKS
         </a>
 
       </nav>
