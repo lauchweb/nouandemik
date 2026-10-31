@@ -1,4 +1,3 @@
-
 <!doctype html>
 <html lang="en">
 
@@ -57,7 +56,7 @@
     :root {
       --background: #ffffff;
       --text: #171717;
-      --accent: #68745A;
+      --accent: #617451;
 
       --page-margin: clamp(20px, 4vw, 64px);
     }
@@ -168,13 +167,15 @@
     .hero-image {
       display: block;
 
+      justify-self: center;
+
       width: min(65%, 560px);
       max-height: 42svh;
 
       height: auto;
       object-fit: contain;
 
-      margin: 0 auto;
+      margin-inline: auto;
     }
 
     .tagline {
@@ -261,8 +262,10 @@
       }
 
       .hero-image {
+        justify-self: center;
         width: 85%;
         max-height: 38svh;
+        margin-inline: auto;
       }
 
       .tagline {
