@@ -9,16 +9,21 @@
     content="width=device-width, initial-scale=1"
   >
 
-  <title>NOU ANDEMIK</title>
+  <title>NOU ANDEMIK — Native Flora</title>
 
   <meta
     name="description"
-    content="NOU ANDEMIK keeps our endemic flora rooted for generations to come."
+    content="NOU ANDEMIK is dedicated to keeping our native flora rooted for generations to come."
   >
 
   <meta
     name="robots"
     content="index, follow"
+  >
+
+  <meta
+    name="theme-color"
+    content="#ffffff"
   >
 
   <link
@@ -41,12 +46,12 @@
 
   <meta
     property="og:title"
-    content="NOU ANDEMIK — Endemic Flora"
+    content="NOU ANDEMIK — Native Flora"
   >
 
   <meta
     property="og:description"
-    content="NOU ANDEMIK keeps our endemic flora rooted for generations to come."
+    content="NOU ANDEMIK is dedicated to keeping our native flora rooted for generations to come."
   >
 
   <meta
@@ -57,6 +62,11 @@
   <meta
     property="og:image"
     content="https://nou.andemik.com/og.jpg"
+  >
+
+  <meta
+    property="og:image:alt"
+    content="NOU ANDEMIK"
   >
 
   <meta
@@ -72,12 +82,12 @@
 
   <meta
     name="twitter:title"
-    content="NOU ANDEMIK — Endemic Flora"
+    content="NOU ANDEMIK — Native Flora"
   >
 
   <meta
     name="twitter:description"
-    content="NOU ANDEMIK keeps our endemic flora rooted for generations to come."
+    content="NOU ANDEMIK is dedicated to keeping our native flora rooted for generations to come."
   >
 
   <meta
@@ -96,6 +106,7 @@
   </script>
 
   <style>
+
     :root {
       --background: #ffffff;
       --text: #171717;
@@ -164,6 +175,7 @@
     .menu-link {
       color: var(--text);
 
+      font-family: inherit;
       font-size: 14px;
       line-height: 1;
 
@@ -192,33 +204,44 @@
     main {
       min-height: 0;
 
-      display: flex;
+      display: grid;
+
+      grid-template-rows:
+        minmax(48px, 1fr)
+        auto
+        auto
+        minmax(48px, 1fr);
+
       align-items: center;
+
+      row-gap: 0;
     }
 
-    .intro {
-      max-width: 520px;
+    .hero-image {
+      display: block;
+
+      width: min(65%, 560px);
+      max-height: 42svh;
+
+      height: auto;
+      object-fit: contain;
+
+      margin: 0 auto;
     }
 
-    .intro h1 {
-      margin: 0 0 12px;
-
-      font-size: clamp(28px, 5vw, 56px);
-      line-height: 0.95;
-
-      font-weight: 400;
-      letter-spacing: -0.04em;
-    }
-
-    .intro p {
+    .tagline {
       max-width: 420px;
 
-      margin: 0;
+      margin: 24px auto 0;
 
+      font-family: inherit;
       font-size: 14px;
       line-height: 1.5;
 
+      font-weight: 400;
       letter-spacing: 0.01em;
+
+      text-align: center;
     }
 
     /* -------------------------
@@ -233,6 +256,7 @@
 
       color: var(--text);
 
+      font-family: inherit;
       font-size: 10px;
       line-height: 1.2;
 
@@ -262,6 +286,10 @@
       text-underline-offset: 3px;
     }
 
+    .footer-dot {
+      user-select: none;
+    }
+
     /* -------------------------
        Focus
     ------------------------- */
@@ -273,34 +301,41 @@
       outline-offset: 4px;
     }
 
-    .footer-dot {
-      user-select: none;
-    }
-
     /* -------------------------
        Mobile
     ------------------------- */
 
     @media (max-width: 600px) {
+
       :root {
         --page-margin: 20px;
       }
 
       .wordmark,
       .menu-link {
-        font-size: 14px;
+        font-size: 12px;
       }
 
-      .intro h1 {
-        font-size: 36px;
+      .header-right {
+        gap: 8px;
       }
 
-      .intro p {
-        font-size: 14px;
+      .hero-image {
+        width: 85%;
+        max-height: 38svh;
+      }
+
+      .tagline {
+        max-width: 340px;
+
+        margin-top: 20px;
+
+        font-size: 12px;
+        line-height: 1.5;
       }
 
       .footer {
-        font-size: 10px;
+        font-size: 9px;
       }
 
       .footer-right {
@@ -309,44 +344,49 @@
     }
 
     @media (max-width: 400px) {
+
+      .wordmark,
+      .menu-link {
+        font-size: 11px;
+      }
+
       .header-right {
-        gap: 8px;
+        gap: 7px;
       }
 
       .footer {
-        grid-template-columns: 1fr;
-        gap: 12px;
+        font-size: 8px;
       }
 
       .footer-right {
-        justify-content: flex-start;
+        gap: 7px;
       }
     }
 
     @media (max-width: 340px) {
+
       :root {
         --page-margin: 16px;
       }
 
       .wordmark,
       .menu-link {
-        font-size: 13px;
-      }
-
-      .intro h1 {
-        font-size: 32px;
+        font-size: 10px;
       }
 
       .footer {
-        font-size: 9px;
+        font-size: 8px;
       }
     }
+
   </style>
 </head>
 
 <body>
 
   <div class="site">
+
+    <!-- Header -->
 
     <header class="header">
 
@@ -358,48 +398,51 @@
         NOU ANDEMIK
       </a>
 
-      <div class="header-right">
+      <nav
+        class="header-right"
+        aria-label="Main navigation"
+      >
 
         <a
           class="menu-link"
-          href="/nursery.html"
-          aria-label="NOU ANDEMIK Nursery"
+          href="/about.html"
         >
-          NURSERY
+          ABOUT
         </a>
 
         <a
           class="menu-link"
           href="mailto:nursery@andemik.com"
-          aria-label="Contact NOU ANDEMIK"
+          aria-label="Contact NOU ANDEMIK by email"
         >
           CONTACT
         </a>
 
-      </div>
+      </nav>
 
     </header>
 
 
-    <main>
+    <!-- Main -->
 
-      <section
-        class="intro"
-        aria-labelledby="page-title"
+    <main aria-label="NOU ANDEMIK">
+
+      <img
+        class="hero-image"
+        src="/home.jpg"
+        alt="Native flora"
+        fetchpriority="high"
+        decoding="async"
       >
 
-        <h1 id="page-title">
-          NOU ANDEMIK
-        </h1>
-
-        <p>
-          Keeping our endemic flora rooted for generations to come.
-        </p>
-
-      </section>
+      <p class="tagline">
+        Keeping our native flora rooted for generations to come.
+      </p>
 
     </main>
 
+
+    <!-- Footer -->
 
     <footer class="footer">
 
